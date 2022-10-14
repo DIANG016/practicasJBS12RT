@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+button {
+  width: 5rem;
+  height: 5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+svg {
+  fill: gray;
+}
+
+/* Crea a partir de aquí tu CSS */
+
+@keyframes latidos {
+  from {
+    transform: none;
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  to {
+    transform: none;
+  }
+}
+
+button > svg:hover:active {
+  fill: red;
+  /* color: red; */
+  text-shadow: 0 0 10px #222, 1px 1px 0 #450505;
+
+  animation: latidos 0.5s infinite;
+  transform-origin: center;
+}
